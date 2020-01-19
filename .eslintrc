@@ -8,7 +8,14 @@
     "jest": true
   },
   "rules": {
-    "camelcase": ["error", {"allow": ["^R_"]}],
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "^R_"
+        ]
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
@@ -16,6 +23,12 @@
           ".js",
           ".jsx"
         ]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
       }
     ],
     "react/jsx-props-no-spreading": 0
