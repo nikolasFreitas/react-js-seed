@@ -8,6 +8,7 @@
     "jest": true
   },
   "rules": {
+    "camelcase": ["error", {"allow": ["^R_"]}],
     "react/jsx-filename-extension": [
       1,
       {
@@ -17,6 +18,6 @@
         ]
       }
     ],
-    "react/jsx-props-no-spreading" : 0
+    "react/jsx-props-no-spreading": 0
   }
 }
