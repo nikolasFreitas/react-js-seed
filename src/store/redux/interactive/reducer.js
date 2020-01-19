@@ -1,13 +1,13 @@
 const standart = {
   count: 0,
-  text: "Empty text"
+  text: 'Empty text',
 };
 
 export default (state = standart, action) => {
   let newState = {};
 
   switch (action.type) {
-    case "ff":
+    case 'ff':
       newState = { newState: action.text };
       break;
 
@@ -17,6 +17,6 @@ export default (state = standart, action) => {
 
   return {
     ...state,
-    ...newState
+    ...newState,
   };
 };
