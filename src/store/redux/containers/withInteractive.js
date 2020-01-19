@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeText } from '../interactive/actions';
+import { changeText, changeCounter } from '../interactive/actions';
 
 export default (WrappedComponent) => {
   const mapStateToProps = ({ interactive }) => ({
@@ -10,6 +10,7 @@ export default (WrappedComponent) => {
 
   const mapDispatchToProps = (dispatch) => ({
     R_changeText: (text) => dispatch(changeText(text)),
+    R_changeCount: (numb) => dispatch(changeCounter(numb)),
   });
 
   function Component(props) {
