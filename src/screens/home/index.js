@@ -3,12 +3,20 @@ import PropTypes from 'prop-types';
 
 import withInteractive from '../../store/redux/containers/withInteractive';
 import SomeGenericComponent from '../../components/SomeGenericComponent';
+import ghHttpHelper from './helper';
 import * as Style from './style';
 
+/**
+ * As props que começam com "RX_" são injetadas pelo HOC.
+ * Props que não são injetadas pelo HOC devem seguir o padrão de camelCase
+ * Nas screens, tentar usar helpers para requisição
+ * Este é apenas um exemplo, evite ao máximo usar estados em escopo global (REDUX)
+ */
 const Home = ({
   RX_count, RX_text, RX_changeText, RX_changeCount,
 }) => {
   const [useOfRredux, setUseOfRredux] = useState(0);
+
 
   return (
     <Style.Container>
@@ -56,6 +64,13 @@ Change text
             </Style.Button>
           </Style.ReduxContent>
         </Style.ReduxParagraph>
+        <Style.ExplanationParagraph>
+          Para um requisição falhada clicke no botão
+          {' '}
+          <br />
+          (Olhar o log)
+          <Style.Button onClick={() => ghHttpHelper()}>click aqui</Style.Button>
+        </Style.ExplanationParagraph>
         <SomeGenericComponent />
       </Style.UseBox>
     </Style.Container>

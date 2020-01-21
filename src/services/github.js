@@ -10,6 +10,12 @@ const github = ({ instance, httpConfig }) => ({
       headers,
     });
   },
+  post: () => {
+    const { headers } = httpConfig();
+    return instance.post('/repository', {
+      headers,
+    });
+  },
 });
 
 export default github;

@@ -17,6 +17,5 @@ const instance = axios.create({
   maxRedirects: 0,
 });
 
-export const httpGithub = () => githubRequest({ instance, httpConfig });
-
+export const httpGithub = githubRequest({ instance, httpConfig });
 export default instance;
