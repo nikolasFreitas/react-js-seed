@@ -6,7 +6,7 @@ import SomeGenericComponent from '../../components/SomeGenericComponent';
 import * as Style from './style';
 
 const Home = ({
-  R_count, R_text, R_changeText, R_changeCount,
+  RX_count, RX_text, RX_changeText, RX_changeCount,
 }) => {
   const [useOfRredux, setUseOfRredux] = useState(0);
 
@@ -27,19 +27,19 @@ const Home = ({
           <Style.ReduxContent>
 redux counter:
             {' '}
-            {R_count}
+            {RX_count}
           </Style.ReduxContent>
           <Style.ReduxContent>
 redux text:
             {' '}
-            {R_text}
+            {RX_text}
           </Style.ReduxContent>
         </Style.ReduxParagraph>
         <Style.ReduxParagraph>
           <Style.ReduxContent>
             <Style.Button onClick={() => {
               setUseOfRredux(useOfRredux + 1);
-              R_changeCount(R_count + 1);
+              RX_changeCount(RX_count + 1);
             }}
             >
               add count
@@ -48,7 +48,7 @@ redux text:
           <Style.ReduxContent>
             <Style.Button onClick={() => {
               setUseOfRredux(useOfRredux + 1);
-              R_changeText('Texto mudou');
+              RX_changeText('Texto mudou');
             }}
             >
 Change text
@@ -63,10 +63,10 @@ Change text
 };
 
 Home.propTypes = {
-  R_count: PropTypes.number.isRequired,
-  R_text: PropTypes.string.isRequired,
-  R_changeText: PropTypes.func.isRequired,
-  R_changeCount: PropTypes.func.isRequired,
+  RX_count: PropTypes.number.isRequired,
+  RX_text: PropTypes.string.isRequired,
+  RX_changeText: PropTypes.func.isRequired,
+  RX_changeCount: PropTypes.func.isRequired,
 };
 
 export default withInteractive(Home);

@@ -4,13 +4,13 @@ import { changeText, changeCounter } from '../interactive/actions';
 
 export default (WrappedComponent) => {
   const mapStateToProps = ({ interactive }) => ({
-    R_count: interactive.count,
-    R_text: interactive.text,
+    RX_count: interactive.count,
+    RX_text: interactive.text,
   });
 
   const mapDispatchToProps = (dispatch) => ({
-    R_changeText: (text) => dispatch(changeText(text)),
-    R_changeCount: (numb) => dispatch(changeCounter(numb)),
+    RX_changeText: (text) => dispatch(changeText(text)),
+    RX_changeCount: (numb) => dispatch(changeCounter(numb)),
   });
 
   function Component(props) {
