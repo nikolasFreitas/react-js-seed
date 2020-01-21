@@ -1,3 +1,3 @@
 export default {
-  algumBff: 'https://homolog.github.com',
+  algumBffUrl: 'https://homolog.github.com',
 };

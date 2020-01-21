@@ -1,3 +1,3 @@
 export default {
-  algumBff: 'http://localhost:3033',
+  algumBffUrl: 'http://localhost:3033',
 };

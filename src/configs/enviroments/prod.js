@@ -1,3 +1,3 @@
 export default {
-  algumBff: 'https://github.com',
+  algumBffUrl: 'https://github.com',
 };
