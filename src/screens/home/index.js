@@ -7,9 +7,9 @@ import ghHttpHelper from './helper';
 import * as Style from './style';
 
 /**
- * As props que começam com "RX_" são injetadas pelo HOC.
+ * As props que começam com "RX_" são injetadas pelo HOC e manipulam o ReduX.
  * Props que não são injetadas pelo HOC devem seguir o padrão de camelCase
- * Nas screens, tentar usar helpers para requisição
+ * Nas screens, tentar usar helpers para requisição para reduzir a quantidade de lógica sobre a screen
  * Este é apenas um exemplo, evite ao máximo usar estados em escopo global (REDUX)
  */
 const Home = ({
